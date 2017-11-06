@@ -22,7 +22,9 @@ describe "New author page", type: :feature do
   end
   
   it "should render withour error" do
-    visit edit_author_path(Author.new(first_name:'Alan', last_name: 'Turing', homepage: 'www.adresse.de').save)
+    author = Author.new(first_name:'Alan', last_name: 'Turing', homepage: 'www.adresse.de')
+	author.save
+	visit edit_author_path(author)
   end
   
 end
