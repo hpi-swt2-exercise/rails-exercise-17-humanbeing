@@ -14,4 +14,11 @@ describe "New author page", type: :feature do
 	expect(page).to have_field('Homepage')
   end
   
+  it "should show error massage when there is no last name" do
+	visit new_author_path
+	click_button('Save')
+	
+	expect(page).to have_text('Last name can\'t be blank')
+  end
+  
 end
