@@ -16,4 +16,8 @@ describe "New author page", type: :model do
 	expect(author.name).to eq('Alan Turing')
   end
   
+  it "should validate that there is a last_name" do
+	expect(Author.new(first_name: 'Alan', last_name: '', homepage: 'http://wikipedia.org/Alan_Turing').save).to eq(false)
+  end
+  
 end
