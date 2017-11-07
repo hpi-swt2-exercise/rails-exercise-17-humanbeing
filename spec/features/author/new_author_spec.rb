@@ -16,7 +16,7 @@ describe "New author page", type: :feature do
   
   it "should show error massage when there is no last name" do
 	visit new_author_path
-	click_button('Save')
+	click_button('Create Author')
 	
 	expect(page).to have_text('Last name can\'t be blank')
   end

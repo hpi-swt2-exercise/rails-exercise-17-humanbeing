@@ -10,7 +10,7 @@ describe "edit for author page", type: :feature do
 		
 		visit edit_author_path(author)
 		fill_in('First name', :with => 'Alan Mathison')
-		click_button('Save Author')	
+		click_button('Update Author')	
 	}.not_to raise_error
   end
 end

@@ -21,4 +21,12 @@ describe "index for author page", type: :feature do
 	
 	expect(page).to have_link('Show')
   end
+  
+  it "should have a link to destroy alan turing" do
+	Author.new(first_name:'Alan', last_name: 'Turing', homepage: 'www.adresse.de').save
+	
+	visit authors_path
+	
+	expect(page).to have_link('Destroy')
+  end
 end
