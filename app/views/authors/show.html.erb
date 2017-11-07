@@ -13,5 +13,11 @@
   <%= @author.homepage %>
 </p>
 
+<h2>Papers</h2>
+<%= render @author.papers %>
+
+<h2>Add a paper:</h2>
+<%= render 'papers/form' %>
+
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
