@@ -1,4 +1,7 @@
 class PapersController < ApplicationController
+  def new
+  end
+  
   def create
     @author = Author.find(params[:author_id])
     @paper = @author.papers.create(paper_params)

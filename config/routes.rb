@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   # this worked for some reason
   
   #get 'authors/new' => 'authors#new'
-  resources :authors do
-	resources :papers
-  end
+  resources :authors
+  resources :papers
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
