@@ -1,0 +1,23 @@
+<h1>Listing authors</h1>
+ 
+<%= link_to 'Add paper', new_paper_path %>
+ 
+<table border=1>
+  <tr>
+    <th>Title</th>
+	<th>Venue</th>
+	<th>Year</th>
+	<th colspan=3>Links</th>
+  </tr>
+ 
+  <% @papers.each do |paper| %>
+    <tr>
+      <td><%= paper.title %></td>
+	  <td><%= paper.venue %></td>
+	  <td><%= paper.year %></td>
+	  <td><%= link_to 'Show', paper_path(paper) %></td>
+	  <td><%= link_to 'Edit', edit_paper_path(paper) %></td>
+	  <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="papers/<%=paper.id%>">Destroy</a></td>
+    </tr>
+  <% end %>
+</table>
