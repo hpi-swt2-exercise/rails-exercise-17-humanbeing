@@ -8,4 +8,8 @@ require 'rails_helper'
 	it "should validate that there is a venue" do
 	  expect(Paper.new(title: '', venue: '', year: '').save).to eq(false)
     end
+	
+	it "should validate that there is a integer year" do
+	  expect(Paper.new(title: '', venue: '', year: '').save).to eq(false)
+    end
   end
