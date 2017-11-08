@@ -16,12 +16,24 @@
   <h2>Authors</h2>
 <% @paper.authors.each do |author| %>
   <p>
-    <strong>Name:</strong>
-    <%= author.name %>
+    <strong>First name:</strong>
+    <%= author.first_name %>
   </p>
+  
+  
+  <p>
+    <strong>Last name:</strong>
+    <%= author.last_name %>
+  </p>
+    
  
   <p>
     <strong>Homepage:</strong>
     <%= author.homepage %>
+  </p>
+  
+  <p>
+    <strong>Name:</strong>
+    <%= author.name %>
   </p>
 <% end %>
