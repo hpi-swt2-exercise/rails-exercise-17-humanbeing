@@ -1,11 +1,24 @@
 class PapersController < ApplicationController
+  def show
+    @paper = Paper.find(params[:id])
+  end
+  
   def new
+  @paper = Paper.new
   end
   
   def create
-    @author = Author.find(params[:author_id])
-    @paper = @author.papers.create(paper_params)
-    redirect_to author_path(@author)
+    #@author = Author.find(params[:author_id])
+    #@paper = @author.papers.create(paper_params)
+    #redirect_to author_path(@author)
+	@paper = Paper.new(paper_params)
+ 
+	if @paper.save
+		redirect_to @paper
+	else
+		render 'new'
+	end 
+  
   end
  
   private
