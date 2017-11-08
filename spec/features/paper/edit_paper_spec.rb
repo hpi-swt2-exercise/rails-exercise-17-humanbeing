@@ -10,7 +10,7 @@ describe "edit for paper page", type: :feature do
 		
 		visit edit_paper_path(paper)
 		fill_in('Title', :with => 'Alan Mathison')
-		click_button('Save Paper')	
+		click_button('Update Paper')	
 	}.not_to raise_error
   end
   
