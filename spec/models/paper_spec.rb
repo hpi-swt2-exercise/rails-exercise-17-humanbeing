@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Paper, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+  describe "New paper page", type: :model do
+    it "should validate that there is a title" do
+	  expect(Paper.new(title: '', venue: '', year: '').save).to eq(false)
+    end
+  end
