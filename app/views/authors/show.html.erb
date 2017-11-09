@@ -13,27 +13,27 @@
   <%= @author.homepage %>
 </p>
 
-<h2>Papers</h2>
-<%= render @author.papers %>
+#<h2>Papers</h2>
+#<%= render @author.papers %>
 
-<h2>Add a paper:</h2>
-<%= form_for :paper, url: papers_path do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :venue %><br>
-    <%= f.text_field :venue %>
-  </p>
-  <p>
-    <%= f.label :year %><br>
-    <%= f.text_field :year %>
-  </p>  
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+#<h2>Add a paper:</h2>
+#<%= form_for :paper, url: papers_path do |f| %>
+#  <p>
+#    <%= f.label :title %><br>
+#    <%= f.text_field :title %>
+#  </p>
+#  <p>
+#    <%= f.label :venue %><br>
+#    <%= f.text_field :venue %>
+#  </p>
+#  <p>
+#    <%= f.label :year %><br>
+#    <%= f.text_field :year %>
+#  </p>  
+#  <p>
+#    <%= f.submit %>
+#  </p>
+#<% end %>
 
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
