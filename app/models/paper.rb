@@ -4,4 +4,6 @@ class Paper < ActiveRecord::Base
   validates :venue, presence: true
   validates :year, presence: true
   validates :year, numericality: { only_integer: true }
+  
+  scope :filter_year, -> (time) { where("year==?", time) if time.present? }
 end
