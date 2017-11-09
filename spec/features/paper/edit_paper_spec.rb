@@ -19,4 +19,11 @@ describe "edit for paper page", type: :feature do
 	paper.save
 	visit edit_paper_path(paper)
   end
+  
+  it "should show selectbox" do
+	paper = Paper.new(title:'Alan', venue: 'Turing', year: 1234)
+	paper.save
+	visit edit_paper_path(paper)
+	expect(page).to have_content("Author 1")
+  end
 end
