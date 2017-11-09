@@ -34,7 +34,7 @@
   <% for i in 1..5 do %>
 	<p>
 	<%= f.label "Author " + i.to_s, for: "paper_author_id_" + i.to_s %>
-	<%= f.collection_select :author_ids, Author.all, :id, :name, {selected: @paper.author_ids[i]}, {name: "paper[author_ids][]", id: "paper_author_id_" + i.to_s} %>
+	<%= f.collection_select :author_ids, Author.all, :id, :name, {selected: @paper.author_ids[i-1], include_blank: '(none)'}, {name: "paper[author_ids][]", id: "paper_author_id_" + i.to_s} %>
 	</p>
   <% end %>
   
